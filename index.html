@@ -1,0 +1,413 @@
+<!-- ------------------OM----------------------- -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/png;base64,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" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        
+    <title>Amazon.com. Spend less. Smile more.</title>
+</head>
+
+<body>
+    <section id="main">
+        <section id="header">
+            <nav id="navbar">
+                <div id="main-nav">
+                    <span class="main-nav-elements logo-span" id="main-nav-element-1"><img src="images/amazon-logo.png"
+                            class="logo" alt=""></span>
+                    <span class="main-nav-elements location" id="main-nav-element-2">Deliever to<br><b>India</b></span>
+                    <span class="main-nav-elements search-box" id="main-nav-element-3">
+                        <span class="search-spans" id="search-element-1">
+                            <select name="" id="dropdown">
+                                <option value="">All Departements</option>
+                                <option value="">Art & Craft</option>
+                                <option value="">Automotive</option>
+                                <option value="">Baby</option>
+                                <option value="">Digital music</option>
+                                <option value="">Books</option>
+                                <option value="">Computers</option>
+                                <option value="">Electronics</option>
+                                <option value="">Deals</option>
+                                <option value="">Luggage</option>
+                                <option value="">Home and Kitchen</option>
+                            </select>
+                        </span>
+                        <span class="search-spans" id="search-element-2">
+                            <input type="search" id="search-bar">
+                        </span>
+                        <button id="search"><span class="search-spans" id="search-element-3"><i
+                                    class="fas fa-search search-btn"></i></span>
+                        </button>
+                    </span>
+                    <!-- <span class="main-nav-elements" id="main-nav-element-4">
+                        <select name="" id="country-select">
+                            <option value="">
+                              English
+                            </option>
+                            <option value="">
+                                Espanol
+                            </option>
+                            <option value="">
+                                 Deustch
+                            </option>
+                            <option value="">
+                                 Potugues
+                            </option>
+                        </select>
+                    </span> -->
+                    <span class="main-nav-elements" id="main-nav-element-5">Hello, Sign in<br><b>Accounts & Lists</b>
+                        <div class="hello-grid" id="grid-show">
+                            <div class="hello-boxes" id="box-1">
+                                <span><button>Sign in</button></span>
+                                <span class="ncs">New customer? <a href="#">Start here.</a></span>
+                            </div>
+                            <div class="hello-boxes" id="box-2">
+                                <span id="box-2-1">Your Lists</span>
+                                <span id="box-2-2">Create a List</span>
+                                <span id="box-2-3">Find a List or Registry</span>
+                                <span id="box-2-4">AmazonSmile Charity Lists</span>
+                            </div>
+                            <div class="hello-boxes" id="box-3">
+                                <span id="box-3-1">Your Account</span>
+                                <span id="box-3-2">Account</span>
+                                <span id="box-3-3">Orders</span>
+                                <span id="box-3-4">Recommendations</span>
+                                <span id="box-3-5">Browsing History</span>
+                                <span id="box-3-6">Watchlist</span>
+                                <span id="box-3-7">Video Purchases and Rental</span>
+                                <span id="box-3-8">Membership ^ Subscription</span>
+                                <span id="box-3-9">Kindle Unlimited</span>
+                                <span id="box-3-10">Contact and Devices</span>
+                                <span id="box-3-11">Subscribe and Save items</span>
+                                <span id="box-3-12">Music Library</span>
+                            </div>
+                        </div>
+                    </span>
+                    <span class="main-nav-elements" id="main-nav-element-6">Returns <br>&Orders</span>
+                    <span class="main-nav-elements" id="main-nav-element-7"><i
+                            class="fas fa-shopping-cart fa-3x"></i></span>
+                </div>
+                <div id="navigation">
+                    <div id="nav-1">
+                        <span id="nav-1-1"><i class="fas fa-bars fa-lg"></i>All</span>
+                        <span id="nav-1-2">Today's Deals</span>
+                        <span id="nav-1-3">Customer Service</span>
+                        <span id="nav-1-4">Gift Cards</span>
+                        <span id="nav-1-5">Registry</span>
+                        <span id="nav-1-6">Sell</span>
+                    </div>
+                    <div id="nav-2">
+                        <span id="nav-2-1">Amazon's response to COVID-19</span>
+                    </div>
+                </div>
+            </nav>
+        </section>
+        <section id="products">
+            <div id="hover-visible"></div>
+            <div id="slider">
+                <div id="images">
+                    <img src="images/hero-1.jpg" alt="" class="imgs" id="hero-1">
+                    <img src="images/hero-2.jpg" alt="" class="imgs" id="hero-2">
+                    <img src="images/hero-3.jpg" alt="" class="imgs" id="hero-3">
+                    <img src="images/hero-4.jpg" alt="" class="imgs" id="hero-4">
+                    <img src="images/hero-5.jpg" alt="" class="imgs" id="hero-5">
+                    <img src="images/hero-6.jpg" alt="" class="imgs" id="hero-6">
+                </div>
+            </div>
+            <div id="main-products">
+                <div class="products" id="product-1" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="p-1-1">
+                        <h5><b>Shop by Category</b></h5>
+                    </div>
+                    <div class="p-1-2">
+                        <img src="images/products/grid-1/img-1.jpg" alt="">
+                        <img src="images/products/grid-1/img-2.jpg" alt="">
+                    </div>
+                    <div class="p-1-3">
+
+                        <img src="images/products/grid-1/img-3.jpg" alt="">
+                        <img src="images/products/grid-1/img-4.jpg" alt="">
+                    </div>
+                    <a href="#">Shop now</a>
+                </div>
+                <div class="products" id="product-2" data-aos="fade-up" data-aos-duration="1500">
+                    <span>
+                        <h5><b>AmazonBasics</b></h5>
+                    </span>
+                    <div>
+                        <img src="images/products/grid-2/mobcable.jpg" alt="">
+                    </div>
+                    <a href="#">See more</a>
+                </div>
+                <div class="products" id="product-3" data-aos="fade-up" data-aos-duration="1500">
+                    <span>
+                        <h5><b>Get fit at home</b></h5>
+                    </span>
+                    <div>
+                        <img src="images/products/grid-3/gfit.jpg" alt="">
+                    </div>
+                    <a href="#">Explore now</a>
+                </div>
+                <div class="products" id="product-4" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="p-4-1">
+                        <span>
+                            <h5><b>Sign in for the best experince</h5></b></h4>
+                        </span>
+                        <button>Sign in securely</button>
+                    </div>
+                    <div class="p-4-2">
+                        <img src="images/products/grid-4/boxesz.jpg" alt="">
+                    </div>
+                </div>
+                <div class="products" id="product-5" data-aos="fade-up" data-aos-duration="1500">
+                    <span>
+                        <h5><b>Oculus</b></h3>
+                    </span>
+                    <div><img src="images/products/grid-5/oculus.jpg" alt=""></div>
+                    <a href="#">Shop now</a>
+                </div>
+                <div class="products" id="product-6" data-aos="fade-up" data-aos-duration="1500">
+                    <span>
+                        <h5><b>Computers & Accessories</b></h3>
+                    </span>
+                    <div><img src="images/products/grid-6/pc6.jpg" alt=""></div>
+                    <a href="#">Shop now</a>
+                </div>
+                <div class="products" id="product-7" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="p-1-1">
+                        <h5><b>Gaming accessories</b></h5>
+                    </div>
+                    <div class="p-7-2">
+                        <img src="images/products/grid-7/headset.jpg" alt="">
+                        <img src="images/products/grid-7/keyboard.jpg" alt="">
+                    </div>
+                    <div class="p-7-3">
+
+                        <img src="images/products/grid-7/mouse.jpg" alt="">
+                        <img src="images/products/grid-7/chair.jpg" alt="">
+                    </div>
+                    <a href="#">Shop now</a>
+                </div>
+                <div class="products" id="product-8" data-aos="fade-up" data-aos-duration="1500">
+                    <span>
+                        <h5><b>Find your ideal TV</b></h5>
+                    </span>
+                    <div><img src="images/products/grid-8/tvunit.jpg" alt=""></div>
+                    <a href="$">See more</a>
+                </div>
+                <div class="products" id="product-9" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="p-9-1">
+                        <h5><b>Gaming accessories</b></h5>
+                    </div>
+                    <div class="p-9-2">
+                        <img src="images/products/grid-9/tshirt1.jpg" alt="">
+                        <img src="images/products/grid-9/lowerss.jpg" alt="">
+                    </div>
+                    <div class="p-9-3">
+
+                        <img src="images/products/grid-9/ledij.jpg" alt="">
+                        <img src="images/products/grid-9/ladytops.jpg" alt="">
+                    </div>
+                    <a href="#">See more</a>
+                </div>
+                <div class="products" id="product-10" data-aos="fade-up" data-aos-duration="1500">
+                    <span>
+                        <h5><b>AmazonBasics</b></h5>
+                    </span>
+                    <div>
+                        <img src="images/products/grid-10/vase.jpg" alt="">
+                    </div>
+                    <a href="#">See more</a>
+                </div>
+                <div class="products" id="product-11" data-aos="fade-up" data-aos-duration="1500">
+                    <span>
+                        <h5><b>AmazonBasics</b></h5>
+                    </span>
+                    <div>
+                        <img src="images/products/grid-11/bedblue.jpg" alt="">
+                    </div>
+                    <a href="#">See more</a>
+                </div>
+                <div class="products" id="product-12" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="p-12-1">
+                        <h5><b>Gaming accessories</b></h5>
+                    </div>
+                    <div class="p-12-2">
+                        <img src="images/products/grid-12/ts2.jpg" alt="">
+                        <img src="images/products/grid-12/cap.jpg" alt="">
+                    </div>
+                    <div class="p-12-3">
+
+                        <img src="images/products/grid-12/spdman.jpg" alt="">
+                        <img src="images/products/grid-12/spdcup.jpg" alt="">
+                    </div>
+                    <a href="#">See more</a>
+                </div>
+                <div class="products" id="product-13" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="p-13-1">
+                        <h5><b>Top rated, premium quality <br>| Amazon Brands & more</b></h5>
+                    </div>
+                    <div class="p-13-2">
+                        <img src="images/products/grid-13/bedd2.jpg" alt="">
+                        <img src="images/products/grid-13/lsofa.jpg" alt="">
+                    </div>
+                    <div class="p-13-3">
+
+                        <img src="images/products/grid-13/essentials.jpg" alt="">
+                        <img src="images/products/grid-13/couple.jpg" alt="">
+                    </div>
+                    <a href="#">See more</a>
+                </div>
+                <div class="products" id="product-14" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="p-14-1">
+                        <h5><b>Top picks for your home</b></h5>
+                    </div>
+                    <div class="p-14-2">
+                        <img src="images/products/grid-14/acc.jpg" alt="">
+                        <img src="images/products/grid-14/wahmchne.jpg" alt="">
+                    </div>
+                    <div class="p-14-3">
+
+                        <img src="images/products/grid-14/oven.jpg" alt="">
+                        <img src="images/products/grid-14/refrgrtr.jpg" alt="">
+                    </div>
+                    <a href="#">See more</a>
+                </div>
+                <div class="products" id="product-15" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="p-15-1">
+                        <h5><b>Fashion clearance store | 50% - 70% off</b></h5>
+                    </div>
+                    <div class="p-15-2">
+                        <img src="images/products/grid-15/gb.jpg" alt="">
+                        <img src="images/products/grid-15/gblegs.jpg" alt="">
+                    </div>
+
+                    <div class="p-15-3">
+
+                        <img src="images/products/grid-15/2bags.jpg" alt="">
+                        <img src="images/products/grid-15/grpfrnd.jpg" alt="">
+                    </div>
+                    <a href="#">See more</a>
+                </div>
+                <div class="products" id="product-16" data-aos="fade-up" data-aos-duration="1500">
+                    <div class="p-16-1">
+                        <h5><b>Fashion clearance store | 50% - 70% off</b></h5>
+                    </div>
+                    <div class="p-16-2">
+                        <img src="images/products/grid-16/groom.jpg" alt="">
+                        <img src="images/products/grid-16/playride.jpg" alt="">
+                    </div>
+                    <div class="p-16-3">
+
+                        <img src="images/products/grid-16/trim1.jpg" alt="">
+                        <img src="images/products/grid-16/weight.jpg" alt="">
+                    </div>
+                    <a href="#">See more</a>
+                </div>
+                <div class="products" id="product-17" data-aos="fade-up" data-aos-duration="1500">
+                    <img src="images/products/grid-17/home-banner.jpg" alt="">
+                </div>
+                <div class="products" id="product-18" data-aos="fade-up" data-aos-duration="1500">
+                    <span>
+                        <h5><b>Up to 80% off | Bestselling home furniture</b></h5>
+                    </span>
+                    <div class="17-adv">
+                        <img src="images/products/grid-18/17-1.jpg" alt="">
+                        <img src="images/products/grid-18/17-2.jpg" alt="">
+                        <img src="images/products/grid-18/17-3.jpg" alt="">
+                        <img src="images/products/grid-18/17-4.jpg" alt="">
+                        <img src="images/products/grid-18/17-5.jpg" alt="">
+                        <img src="images/products/grid-18/17-6.jpg" alt="">
+                    </div>
+                </div>
+                <div class="products" id="product-19" data-aos="fade-up" data-aos-duration="1500">
+                    <span>
+                        <h5><b>Up to 80% off | Bestselling jeans and dresses</b></h5>
+                    </span>
+                    <div class="18-adv">
+                        <img src="images/products/grid-19/18-1.jpg" alt="">
+                        <img src="images/products/grid-19/18-2.jpg" alt="">
+                        <img src="images/products/grid-19/18-3.jpg" alt="">
+                        <img src="images/products/grid-19/18-4.jpg" alt="">
+                        <img src="images/products/grid-19/18-5.jpg" alt="">
+                        <img src="images/products/grid-19/18-6.jpg" alt="">
+                        <img src="images/products/grid-19/18-7.jpg" alt="">
+                        <img src="images/products/grid-19/18-8.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Footer-Section -->
+
+
+    <section id="footer">
+        <div class="spr">
+            <span>See personalized recommendations</span>
+            <button>Sign in</button>
+            <span>New customer? <a href="#">Start here.</a></span>
+        </div>
+        <div class="top-scroll"><a href="#main"><button class="scroll">Back to top</button></a></div>
+        <div class="footer-1">
+            <div class="f-1-1">
+                <h6><b>Get to know Us</b></h5>
+                    <h6>Careers</h6>
+                    <h6>Press Releases</h6>
+                    <h6>Amazon Cares</h6>
+                    <h6>About us</h6>
+                    <h6>Gift a smile</h6>
+            </div>
+            <div class="f-1-2">
+                <h6><b>Connect with Us</b></h6>
+                <h6>Facebook</h6>
+                <h6>Twitter</h6>
+                <h6>Instagram</h6>
+                <br>
+                <br>
+            </div>
+            <div class="f-1-3">
+                <h6><b>Make Money with Us</b></h6>
+                <h6>Sell on Amazon</h6>
+                <h6>Amazon Global selling</h6>
+                <h6>Become an Affiliate</h6>
+                <h6>Advertise your Products</h6>
+                <br>
+            </div>
+            <div class="f-1-4">
+                <h6><b>Let us Help You</b></h6>
+                <h6>Your Account</h6>
+                <h6>100% Purchase Protection</h6>
+                <h6>Returns center</h6>
+                <h6>Helps</h6>
+                <br>
+            </div>
+        </div>
+        <div class="footer-2">
+            <a href="#">Conditions of use anf safe</a>
+            <a href="#">Privacy Notice</a>
+            <a href="#">Interest Based Ads</a>
+            <a href="#">© 1996-2021, Amazon.com, Inc. or its affiliates</a>
+        </div>
+    </section>
+
+    <!-- Footer-Section -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
