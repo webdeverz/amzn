@@ -598,3 +598,22 @@ body a{
 #search-bar{
     padding: 5px;
 }
+
+@media (max-width: 768px){
+    #main{
+        display: none;
+    }
+    #footer{
+        display: none;
+    }
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .unresponsive{
+        font-size: 3rem;
+        font-weight: bold;
+        width: 50rem;
+    }
+}
