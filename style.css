@@ -612,8 +612,12 @@ body a{
         justify-content: center;
     }
     .unresponsive{
+        display: unset;
         font-size: 3rem;
         font-weight: bold;
         width: 50rem;
     }
+}
+.unresponsive{
+    display: none;
 }
